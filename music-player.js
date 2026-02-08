@@ -25,7 +25,7 @@ const songs = [
         image: "./music/2026-selections/search-me-lord.jpg",
         name: "Search Me, Lord",
         artist: "arr. Jimm Hammerly",
-        audio: "./joy-to-the-world.mp3",
+        audio: "./music/2026-selections/Search_Me_-_Demonstration.mp3",
     },
 ];
 
