@@ -1,0 +1,132 @@
+/* Place your CSS styles in this file */
+
+
+/* Create a Parallax Effect */
+.bgimg-format{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('./assets/Music-BG.jpeg');
+  min-height: 100%;
+} 
+.bgimg-2 {
+  background-image: url('./assets/12633362-girl-4650279_1920.jpg');
+  min-height: 100%;
+} 
+.parallax-content {
+  height: 400px;
+  position: relative;
+}
+.vertical-center {
+      display: flex;
+      flex-direction: column; /* Stack children vertically */
+      justify-content: center; /* Center children vertically */
+      align-items: center; /* Center children horizontally */
+      /* Keep the existing absolute positioning styles if they are needed for the container itself */
+      position: absolute;
+      top: 50%; /* Or your desired top value */
+      left: 0; /* Or your desired left value */
+      transform: translate(0, -50%); /* Or your desired transform */
+      width: 100%; /* Ensure it takes full width if needed */
+      height: 100%; /* Ensure it takes full height if needed to center children within it */
+    }
+*, .sans-font{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, .serif-font{
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sans-font-i{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+.serif-font-i {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-1 {
+  letter-spacing: 5px;
+  text-shadow: 4px 4px 4px grey;
+  width: fit-content; margin: 0px auto 0px auto;
+}
+
+.hero-text-2 {
+  letter-spacing: 5px;
+  text-shadow: 4px 4px 4px grey;
+  font-size: 2rem;
+}
+
+/* MusicPlayerCSS */
+#music-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#song-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#song-name {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+#music-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#music-buttons i {
+    padding: 20px;
+    /* color: red; */
+}
+
+#songSlider {
+    accent-color: red;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 5px;
+    background: ghostwhite;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#songSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
