@@ -79,11 +79,14 @@ h1, h2, h3, h4, h5, .serif-font{
 }
 
 /* MusicPlayerCSS */
-i.fa-play:hover {
-                color: #ddd;
-                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+i#playPauseSong, i#restartSong {
+  cursor: pointer;
+}
+i#playPauseSong:hover, i#restartSong:hover {
+  color: #ddd;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
             }
-            .truncate {
+.truncate {
     white-space: nowrap;      /* Prevents text from wrapping to the next line */
     overflow: hidden;         /* Hides the overflowing text */
     text-overflow: ellipsis;  /* Displays an ellipsis (...) to signify truncated text */

@@ -5,15 +5,15 @@ const songArtist = document.getElementById("songArtist");
 const songSlider = document.getElementById("songSlider");
 
 const playpauseButton = document.getElementById("playPauseSong");
-const prevSongButton = document.getElementById("prevSong");
+const restartSongButton = document.getElementById("restartSong");
 const nextSongButton = document.getElementById("nextSong");
 
 const songs = [
     {
         image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "I Will Sing Praise",
-        artist: "arr. Dave Williamson",
-        audio: "./music/2026-schedule/iI-Sing-Alleluia-LSTN.mp3"
+        name: "I Sing Alleluia",
+        artist: "arr. Jeff Lippencott",
+        audio: "./music/2026-schedule/I-Sing-Alleluia-LSTN.mp3"
     },
     {
         image: "./music/2026-schedule/2026-schedule.jpeg",
@@ -153,6 +153,12 @@ function changeSongIndex(index) {
     playpauseButton.classList.add('fa-regular', 'fa-circle-pause');
     audio.play();
 };
+
+restartSongButton.addEventListener("click", function() {
+    changeSongIndex(currentSongIndex);
+    updateSong();
+    audio.play();
+});
 
 setInterval(moveSlider, 1000);
 

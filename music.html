@@ -21,6 +21,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
 
+        <style>
+            @media screen and (max-width: 600px) {
+                #sliderDiv {
+                    display: none;
+                }
+                #playerControls {
+                    margin-left: auto;
+                    padding-right: 16px;
+                }
+            }
+        </style>
+
     </head>
 
     <body>
@@ -62,8 +74,10 @@
         <span class="truncate" id="songName"><b>Song Title Song Title song title</b></span>
         <span class="truncate small" id="songArtist">Artist / Arranger</span>
     </div>
-    <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x" style="cursor: pointer; "></i>
-    <div class="flex-grow-1 px-4"><input type="range" id="songSlider" class="form-range"></div>
+    <span id="playerControls" class="d-flex align-items-center">
+        <i id="restartSong" class="fa-solid fa-backward-step fa-2x"></i>
+        <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x"></i></span>
+    <div id="sliderDiv" class="flex-grow-1 px-4"><input type="range" id="songSlider" class="form-range"></div>
 
 </div>
 <!-- Page Container -->
@@ -238,6 +252,7 @@
             <a class="btn btn-secondary" href="#" target="_blank">Join the ministry today!</a>
     <!-- Footer end. -->
     </footer>
+    <div style="height: 100px; width: 100%; background-color: ghostwhite;">&nbsp;</div>
 
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
