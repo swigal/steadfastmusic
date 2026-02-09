@@ -35,7 +35,7 @@
             </div>
         </section>
 
-        <nav class="navbar navbar-expand-sm justify-content-center shadow-sm mb-5" style="background-color: ghostwhite;">
+        <nav class="navbar navbar-expand-sm justify-content-center shadow-sm" style="background-color: ghostwhite;">
             <ul class="navbar-nav">
                 <li class="nav-item ">
                     <a class="nav-link active" href="./index.html">Home</a>
@@ -58,7 +58,7 @@
 <!-- Page Container -->
 <div class=""><div class="container">    
   <!-- The Grid -->
-  <div class="row">
+  <div class="row mt-5">
     <!-- Left Column -->
     <div class="col-lg-4 mb-5">
         <div class="card ">
@@ -74,10 +74,10 @@
                     <li><a href="./music.html?songIndex=1">A Blessing (Feb. 8th)</a></li>
                     <li><a href="./music.html?songIndex=3">Search Me, Lord (Feb. 18th &amp; 22nd)</a></li>
                     <li><a href="./music.html?songIndex=4">Hide Me (Mar. 8th)</a></li>
+                    <li><a href="./easter-cantata-2026.html">Easter Cantata: The Way, the Truth, the Life (Apr. 5th)</a></li>
                     <!--<li><a href="./music.html?songIndex=5">When You Speak to Me (Mar. 22nd)</a></li>
                     <li><a href="./music.html?songIndex=6">Blessed Is He (Mar. 29th)</a></li>
                     <li><a href="./music.html?songIndex=7">This Is Our Freedom (Apr. 2nd)</a></li>
-                    <li><a href="./music/easter-cantata-2026.html">The Way, the Truth, the Life (Apr. 5th)</a></li>
                     <li><a href="./music.html?songIndex=8">Amazing Love (Apr. 12th)</a></li>
                     <li><a href="./music.html?songIndex=9">Hallelujah (Apr. 26th)</a></li>
                     <li><a href="./music.html?songIndex=10">Tis So Sweet to Trust in Jesus (May 10th)</a></li>
@@ -102,29 +102,77 @@
                 <h4 class="text-center">Rehearsal &ndash; Sundays at 3:00 PM</h4>
             </div>
         </div>
+
+        <!--Post Tag Filters-->
+        <div class="card mt-3">
+            <h4 class="card-header text-center">Filter Posts by Tag</h4>
+            <div class="card-body">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-secondary filter-btn" data-filter="all" onclick="filterElements('all')">All</button>
+                    <button class="btn btn-secondary filter-btn" data-filter="update" onclick="filterElements('update')">Updates</button>
+                    <button class="btn btn-secondary filter-btn" data-filter="spiritual-formation" onclick="filterElements('spiritual-formation')">Spiritual Formation</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Right Column -->
     <div class="col-lg-8 mb-5">
 
 <!-- Post -->
-         <section class="card mb-3">
-            <div class="card-body">
-                <div class="d-flex align-items-center">
-                    <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
-                    
-                    <h4 class="ps-2">Samuel Wigal</h4>
-                    <div class="ms-auto" style="opacity: 0.6;">February 6, 2026 9:05 PM</div>
-                </div>
-                
-                <hr>
-                <p>Hey guys!  This Sunday (Feb 8th) we will be singing "I Will Sing Praise" as the anthem, and "A Blessing" as the choral benediction.  Please make sure to practice them and be ready for Sunday!</p>
-                
-                <p>Last week I handed out the easter cantata books, "The Way, the Truth, the Life," by Dennis and Nan Allen.  I have gotten the music disc from Bill and have uploaded eveything to site.  You can find the music <a href="./music/easter-cantata-2026">here on the cantata page</a>.  We will begin working on one song each week for now, then as it draws closer, we will begin focusing on the whole.</p>
-                
-                <p>Thanks guys, see you all Sunday morning!</p>
-            </div>
-        </section>
+<section class="card mb-3 filterable-item" data-category="update" style="visibility: visible;">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
+            <h4 class="ps-2">Samuel Wigal</h4>
+            <div class="ms-auto" style="opacity: 0.6;">February 6, 2026 9:05 PM</div>
+        </div>
+        <hr>
+        <h1>Weekly Update - Feb 8th</h1>
+        
+        <p>Hey guys!  This Sunday (Feb 8th) we will be singing "I Will Sing Praise" as the anthem, and "A Blessing" as the choral benediction.  Please make sure to practice them and be ready for Sunday!</p>
+        
+        <p>Last week I handed out the easter cantata books, "The Way, the Truth, the Life," by Dennis and Nan Allen.  I have gotten the music disc from Bill and have uploaded eveything to site.  You can find the music <a href="./music/easter-cantata-2026">here on the cantata page</a>.  We will begin working on one song each week for now, then as it draws closer, we will begin focusing on the whole.</p>
+        
+        <p>Thanks guys, see you all Sunday morning!</p>
+    </div>
+    <div class="card-footer">
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('all')">All</span>
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('update')">Updates</span>
+    </div>
+</section>
+
+<!-- Post -->
+  <section class="card mb-3 filterable-item" data-category="spiritual-formation" style="visibility: visible;">
+    <div class="card-body">
+      <div class="d-flex align-items-center">
+          <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
+          <h4 class="ps-2">Samuel Wigal</h4>
+          <div class="ms-auto" style="opacity: 0.6;">January, 4th 2026 3:00 PM</div>
+      </div>
+      <hr>
+      <h1>7 Characteristics of a Worship Leader</h1>
+      <p>Becoming an effective worship leader requires developing several key characteristics. Here are the seven essential traits every worship leader should strive for:</p>
+
+      <ol>
+        <li><b>A Heart for God: </b>Prioritize a personal relationship with God and allow that to fuel your worship leading.</li>
+        <li><b>A Heart for People: </b>Lead with love, serve your team and congregation, and build a strong community.</li>
+        <li><b>Humility: </b>Be humble and avoid pride.</li>
+        <li><b>Knowledge of God’s Word: </b>Have a solid understanding of the Bible and theology.</li>
+        <li><b>Organization/Administration Skills: </b>Manage your team well and plan services thoughtfully.</li>
+        <li><b>Communication Skills: </b>Communicate clearly and genuinely, both verbally and non-verbally. Be teachable and learn to listen more.</li>
+        <li><b>Musical Ability: </b>Develop your skills in order to be the most effective you can be in the musical aspect of worship.</li>
+      </ol>
+      <p>These characteristics are crucial for effective worship leadership. Aim to embody them in your ministry, always seeking growth and improvement.</p>
+      <p><i>Embrace these principles, and you’ll be well on your way to becoming a truly great worship leader.</i></p>
+</p>
+    </div>
+    <div class="card-footer">
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('all')">All</span>
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('spiritual-formation')">Spiritual Formation</span>        
+    </div>
+  </section>
    
     
     </div>
