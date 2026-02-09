@@ -79,54 +79,36 @@ h1, h2, h3, h4, h5, .serif-font{
 }
 
 /* MusicPlayerCSS */
-#music-player {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#song-image {
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-}
-
-#song-name {
-    margin-top: 20px;
-    font-size: 2em;
-}
-
-#music-buttons {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#music-buttons i {
-    padding: 20px;
-    /* color: red; */
-}
-
-#songSlider {
-    accent-color: red;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 90%;
-    height: 5px;
-    background: ghostwhite;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
+i.fa-play:hover {
+                color: #ddd;
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .truncate {
+    white-space: nowrap;      /* Prevents text from wrapping to the next line */
+    overflow: hidden;         /* Hides the overflowing text */
+    text-overflow: ellipsis;  /* Displays an ellipsis (...) to signify truncated text */
+    max-width: 165px;         /* Defines the width of the container */
+    display: block;           /* Ensures the above properties work correctly */
+            }
 #songSlider::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: black;
-    width: 15px;
-    height: 15px;
+    background: ghostwhite;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
+.material-icons {
+      vertical-align: middle; /* Aligns the icon to the middle of the text */
+      /* You might need to adjust font-size or line-height for finer control */
+      font-size: 40px;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+
+    .vertical-align-middle {
+      vertical-align: middle;
+    }
+    .material-icons:hover {text-shadow: 0px 0px 5px grey;}

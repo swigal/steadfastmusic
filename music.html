@@ -17,6 +17,8 @@
         
         <!--Font Awesome-->
         <script src="https://kit.fontawesome.com/bf8d243e3f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
 
     </head>
@@ -51,28 +53,174 @@
                 </li>
             </ul>
         </nav>  
-<!-- Page Container -->
-<div class="w3-container w3-content w3-margin" style="max-width:1400px;">    
-  <!-- <audio controls src="./jingle-bells.mp3"></audio> -->
-</div>
 
-<div class="w3-container w3-margin">
-    <div id="musicPlayer" class="w3-card w3-center mx-auto" style="max-width:300px;">
-        <img id="songImage" src="./music/2026-choral-selections.jpeg" style="width:100%">
-        <h3 id="songName" style="padding-top:16px;">Song Title</h3>
-        <p id="songArtist">Artist/Arranger</p>
+<!--Sticky Bottom Media Player-->
 
-        <input id="songSlider" type="range">
-
-        <div id="musicButtons" class="w3-padding w3-padding-16 w3-flex" style="justify-content: space-between; align-items: center;">
-            <i id="shuffleSong" class="fa-solid fa-shuffle"></i>                
-            <i id="prevSong" class="fa-solid fa-backward-step fa-2x"></i>
-            <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x"></i>
-            <i id="nextSong" class="fa-solid fa-forward-step fa-2x"></i>
-            <i id="repeatSong" class="fa-solid fa-repeat"></i>
-        </div>
+<div class="panel d-flex align-items-center text-bg-secondary fixed-bottom" style="height: 100px;">
+    <img id="songImage" src="./music/2026-choral-selections.jpeg" class="" height="100px" width="auto" >
+    <div class="px-3">
+        <span class="truncate" id="songName"><b>Song Title Song Title song title</b></span>
+        <span class="truncate small" id="songArtist">Artist / Arranger</span>
     </div>
+    <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x" style="cursor: pointer; "></i>
+    <div class="flex-grow-1 px-4"><input type="range" id="songSlider" class="form-range"></div>
+
 </div>
+<!-- Page Container -->
+
+        <div class="container mb-5">
+            <h1 class="mb-4">Music Resources</h1>
+            <ul class="list-group">
+        <li class="list-group-item d-flex">
+          <div id="playButton" class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('0')">play_circle</div>
+          <div class="ps-3"><b>I Sing Alleluia</b> (Jan 11th)<br>
+            <span class="small"><i>Arranged by</i> Jeff Lippencott</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/I-Sing-Alleluia-Piano-Vocal.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/I-Sing-Alleluia-LSTN.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('1')">play_circle</div> 
+          <div class="ps-3"><b>A Blessing</b> (Jan 25th)<br> 
+            <span class="small"><i>arranged by</i> Dennis Allen</span></div>
+          <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/A Blessing - vocals.pdf" target="_blank">picture_as_pdf</a> 
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/A%20Blessing%20-%20Listening%20Demo.mp3" target="_blank">audio_file</a>       
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('2')">play_circle</div>
+          <div class="ps-3"><b>I Will Sing Praise</b> (Feb 8th)<br>
+            <span class="small"><i>Arranged by</i> Dave Williamson</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/I-Will-Sing-Praise-vox.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/I Will Sing Praise - Demo.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('3')">play_circle</div>
+          <div class="ps-3"><b>Search Me, Lord</b> (Feb 18th &amp; 22nd)<br>
+            <span class="small"><i>Arranged by</i> Jim Hammerly</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Search-Me-Vocals.PDF" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Search Me - Demonstration.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('4')">play_circle</div> 
+          <div class="ps-3"><b>Hide Me</b> (Mar 8th)<br>
+            <span class="small"><i>Arranged by</i> Dennis Allen</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Hide Me - Vocals.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Hide Me.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('5')">play_circle</div>
+          <div class="ps-3"><b>When You Speak to Me</b> (Mar 22nd)<br>
+            <span class="small"><i>Arranged by</i> Kyle Hill</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/When-You-Speak-to-Me-Vocals.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/When You Speak - Demonstration.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('6')">play_circle</div> 
+          <div class="ps-3"><b>Blessed Is He</b> (Mar 29th)<br> 
+            <span class="small"><i>Arranged by</i> Dennis Allen</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Blessed Is He.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Blessed is He - Listening Demo.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('7')">play_circle</div>
+          <div class="ps-3"><b>This Is Our Freedom</b> (Apr 2nd)<br>
+            <span class="small"><i>Arranged by</i> Camp Kirkland</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/This Is Our Freedom - vocals.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/This Is Our Freedom - Demonstration.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <a class="material-symbols-outlined material-icons" type="button"href=".music/easter-cantata-2026.html">drive_file_move</a>
+          <div class="ps-3"><b>The Way, the Truth, The Life</b> (Apr 5th)<br>
+            <span class="small"><i>Easter Cantata by Dennis and Nan Allen</i></span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/The_Way_the_Truth_the_Life_Choral_Book_Samples.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="#" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('8')">play_circle</div> 
+          <div class="ps-3"><b>Amazing Love</b> (Apr 12th)<br>
+            <span class="small"><i>Arranged by</i> Bob Burroughs</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Amazing Love - vocals.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Amazing Love - Demonstration.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('9')">play_circle</div> 
+          <div class="ps-3"><b>Hallelujah</b> (Apr 26th)<br>
+            <span class="small"><i>Arranged by</i> John Patrick</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Hallelujah - Patrick - vocals.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Hallelujah - Patrick.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('10')">play_circle</div>
+          <div class="ps-3"><b>Tis So Sweet to Trust in Jesus</b> (May 10th)<br>
+            <span class="small"><i>Arranged by</i> Russel Mauldin</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Tis-So-Sweet-vocal-only.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="./music/2026-schedule/Tis So Sweet - Demonstration.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('11')">play_circle</div>
+          <div class="ps-3"><b>Holy</b> (May 24th)<br>
+            <span class="small"><i>Arranged by</i> John Patrick</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/2026-schedule/Holy - vocal only.pdf" target="_blank">picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="./music/2026-schedule/Holy - Demo.mp3" target="_blank">audio_file</a>
+        </li>
+
+<!--        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeTwentySixScheduleAudio('https://revelationfellowship.org/music/2026-schedule/Doxology%20-%20Demonstration.mp3', 'Doxology, arr. by Mark Andrew')">play_circle</div> 
+          <div class="ps-3"><b>Doxology</b> <br>
+            <span class="small"><i>Arranged by</i> Mark Andrew</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="../music/2026-schedule/Doxology-Vocals.pdf" >picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Doxology - Demonstration.mp3" >audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeTwentySixScheduleAudio('https://revelationfellowship.org/music/2026-schedule/Every%20Day%20-%20Demonstration.mp3', 'Every Day, arr. by Don Chapman')">play_circle</div> 
+          <div class="ps-3"><b>Every Day</b> <br>
+            <span class="small"><i>Arranged by</i> Don Chapman</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="../music/2026-schedule/Every Day - Vocals.PDF" >picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Every Day - Demonstration.mp3" >audio_file</a>
+        </li>
+
+        
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeTwentySixScheduleAudio('https://revelationfellowship.org/music/2026-schedule/Hallelujah-Lippencott-LSTN.mp3', 'Hallelujah (Praise & Worship), arr. Jeff Lippencott')">play_circle</div> 
+          <div class="ps-3"><b>Hallelujah <span class="small">(Praise & Worship)</span></b> <br>
+            <span class="small"><i>Arranged by</i> Jeff Lippencott</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="../music/2026-schedule/Hallelujah-Lippencott-vocals.pdf" >picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Hallelujah-Lippencott-LSTN.mp3" >audio_file</a>
+        </li>
+
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeTwentySixScheduleAudio('https://revelationfellowship.org/music/2026-schedule/The%20Lord%20Our%20God%20Is%20Holy%20Vocal%20Mix.mp3', 'The Lord Our God Is Holy')">play_circle</div>
+          <div class="ps-3"><b>The Lord Our God Is Holy</b> <br>
+            <span class="small"><i>Arranged by</i> Hal Wright</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="../music/2026-schedule/The Lord Our God Is Holy.pdf" >picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/The Lord Our God Is Holy Vocal Mix.mp3" >audio_file</a>
+          </li>       
+
+        <li class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeTwentySixScheduleAudio('https://revelationfellowship.org/music/2026-schedule/You%20Came%20-%20Demonstration.mp3', 'You Came')">play_circle</div>
+          <div class="ps-3"><b>You Came</b> <br>
+            <span class="small"><i>Arranged by</i> John Patrick</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="../music/2026-schedule/You Came - vocals.pdf" >picture_as_pdf</a>
+          <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/You Came - Demonstration.mp3" >audio_file</a>
+        </li>
+        -->
+      </ul>
+       </div>
+
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
     <footer class="" style="background-color: ghostwhite;">
         <div class="container text-center py-5">
