@@ -22,14 +22,20 @@
         <link rel="stylesheet" href="styles.css">
 
         <style>
+            #playerPanel {
+                visibility: hidden;
+            }
+
             @media screen and (max-width: 600px) {
                 #sliderDiv {
                     display: none;
                 }
                 #playerControls {
                     margin-left: auto;
-                    padding-right: 16px;
                 }
+            }
+            .current-song {
+                background-color: #f0f0f0;
             }
         </style>
 
@@ -68,7 +74,7 @@
 
 <!--Sticky Bottom Media Player-->
 
-<div class="panel d-flex align-items-center text-bg-secondary fixed-bottom" style="height: 100px;">
+<div id="playerPanel" class="panel d-flex align-items-center text-bg-secondary fixed-bottom" style="height: 100px;">
     <img id="songImage" src="./music/2026-choral-selections.jpeg" class="" height="100px" width="auto" >
     <div class="px-3">
         <span class="truncate" id="songName"><b>Song Title Song Title song title</b></span>
@@ -78,6 +84,7 @@
         <i id="restartSong" class="fa-solid fa-backward-step fa-2x"></i>
         <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x"></i></span>
     <div id="sliderDiv" class="flex-grow-1 px-4"><input type="range" id="songSlider" class="form-range"></div>
+    <span style="padding-right:16px;"><i id="closePlayer" class="fa-solid fa-circle-xmark fa-3x"></i></span>
 
 </div>
 <!-- Page Container -->
@@ -85,7 +92,7 @@
         <div class="container mb-5">
             <h1 class="mb-4">Music Resources</h1>
             <ul class="list-group">
-        <li class="list-group-item d-flex">
+        <li id="song0" class="list-group-item d-flex">
           <div id="playButton" class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('0')">play_circle</div>
           <div class="ps-3"><b>I Sing Alleluia</b> (Jan 11th)<br>
             <span class="small"><i>Arranged by</i> Jeff Lippencott</span></div>
@@ -93,7 +100,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/I-Sing-Alleluia-LSTN.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song1" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('1')">play_circle</div> 
           <div class="ps-3"><b>A Blessing</b> (Jan 25th)<br> 
             <span class="small"><i>arranged by</i> Dennis Allen</span></div>
@@ -101,7 +108,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/A%20Blessing%20-%20Listening%20Demo.mp3" target="_blank">audio_file</a>       
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song2" class="list-group-item d-flex ">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('2')">play_circle</div>
           <div class="ps-3"><b>I Will Sing Praise</b> (Feb 8th)<br>
             <span class="small"><i>Arranged by</i> Dave Williamson</span></div>
@@ -109,7 +116,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/I Will Sing Praise - Demo.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song3" class="list-group-item d-flex ">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('3')">play_circle</div>
           <div class="ps-3"><b>Search Me, Lord</b> (Feb 18th &amp; 22nd)<br>
             <span class="small"><i>Arranged by</i> Jim Hammerly</span></div>
@@ -117,7 +124,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Search Me - Demonstration.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song4" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('4')">play_circle</div> 
           <div class="ps-3"><b>Hide Me</b> (Mar 8th)<br>
             <span class="small"><i>Arranged by</i> Dennis Allen</span></div>
@@ -125,7 +132,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Hide Me.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song5" class="list-group-item d-flex ">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('5')">play_circle</div>
           <div class="ps-3"><b>When You Speak to Me</b> (Mar 22nd)<br>
             <span class="small"><i>Arranged by</i> Kyle Hill</span></div>
@@ -133,7 +140,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/When You Speak - Demonstration.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song6" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('6')">play_circle</div> 
           <div class="ps-3"><b>Blessed Is He</b> (Mar 29th)<br> 
             <span class="small"><i>Arranged by</i> Dennis Allen</span></div>
@@ -141,7 +148,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Blessed is He - Listening Demo.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song7" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('7')">play_circle</div>
           <div class="ps-3"><b>This Is Our Freedom</b> (Apr 2nd)<br>
             <span class="small"><i>Arranged by</i> Camp Kirkland</span></div>
@@ -157,7 +164,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="#" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song8" class="list-group-item d-flex ">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('8')">play_circle</div> 
           <div class="ps-3"><b>Amazing Love</b> (Apr 12th)<br>
             <span class="small"><i>Arranged by</i> Bob Burroughs</span></div>
@@ -165,7 +172,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Amazing Love - Demonstration.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song9" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('9')">play_circle</div> 
           <div class="ps-3"><b>Hallelujah</b> (Apr 26th)<br>
             <span class="small"><i>Arranged by</i> John Patrick</span></div>
@@ -173,7 +180,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="/music/2026-schedule/Hallelujah - Patrick.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song10" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('10')">play_circle</div>
           <div class="ps-3"><b>Tis So Sweet to Trust in Jesus</b> (May 10th)<br>
             <span class="small"><i>Arranged by</i> Russel Mauldin</span></div>
@@ -181,7 +188,7 @@
           <a class="material-symbols-outlined material-icons" type="button" href="./music/2026-schedule/Tis So Sweet - Demonstration.mp3" target="_blank">audio_file</a>
         </li>
 
-        <li class="list-group-item d-flex">
+        <li id="song11" class="list-group-item d-flex">
           <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('11')">play_circle</div>
           <div class="ps-3"><b>Holy</b> (May 24th)<br>
             <span class="small"><i>Arranged by</i> John Patrick</span></div>
