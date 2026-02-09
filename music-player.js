@@ -97,6 +97,53 @@ const songs = [
         artist: "arr. John Patrick",
         audio: "./music/2026-schedule/Holy%20-%20Demo.mp3",
     },
+    {
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "Prepare the Way",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/01_Prepare_the_Way_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "Narration 1",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/02_Narration_01_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "O The Blood of Jesus Medley",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/03_O_the_Blood_of_Jesus_Medley_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "Narration 2",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/04_Narration_02_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "What Wondrous Love",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/05_What_Wondrous_Love_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "Narration 3",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/06_Narration_03_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "Alive",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/07_Alive_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "Narration 4",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/08_Narration_04_Audio_Sample.mp3"
+    },{
+        image: "./music/easter-cantata-2026/001260469.avif",
+        name: "You Are My King",
+        artist: "Dennis and Nan Allen",
+        audio: "./music/easter-cantata-2026/09_You_Are_My_King_Audio_Sample.mp3"
+    },
+
 ];
 
 const audio = document.createElement("audio");

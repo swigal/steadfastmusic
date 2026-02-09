@@ -1,0 +1,207 @@
+  <!doctype html>
+
+<html>
+     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Steadfast Music Ministries</title>
+
+        <!-- Load external CSS styles -->
+        
+        
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/bf8d243e3f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            #playerPanel {
+                visibility: hidden;
+            }
+
+            @media screen and (max-width: 600px) {
+                #sliderDiv {
+                    display: none;
+                }
+                #playerControls {
+                    margin-left: auto;
+                }
+            }
+            .current-song {
+                background-color: #f0f0f0;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <section class="bgimg-1 bgimg-format">
+            <div class="container text-center py-5">
+                <h1 class="display-1 hero-text-1" style="border-bottom: 3px solid black; padding-bottom: 10px">STEADFAST</h1>
+                <p class="hero-text-1 hero-text-2">MUSIC MINISTRIES</p>
+            </div>
+
+            <div class="pb-5">
+                <div class="container text-center px-3 pt-4 pb-3 shadow" style="max-width: 375px; background-color: ghostwhite;">
+                    <p class="serif-font" style="font-size: 1.25rem">"Because Your steadfast love is better than life, my lips will praise You."</p>
+                    <p class="small" style="font-style: italic;">&ndash; Psalm 63:4 (ESV)</p>
+            </div>
+        </section>
+
+        <nav class="navbar navbar-expand-sm justify-content-center shadow-sm mb-5" style="background-color: ghostwhite;">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Music</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./music.html">Music Resources</a></li>
+                    <li><a class="dropdown-item active" href="./easter-cantata-2026.html">Easter Cantata Resources</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./schedule.html">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About</a>
+                </li>
+            </ul>
+        </nav>  
+
+<!--Sticky Bottom Media Player-->
+
+<div id="playerPanel" class="panel d-flex align-items-center text-bg-secondary fixed-bottom" style="height: 100px;">
+    <img id="songImage" src="./music/2026-choral-selections.jpeg" class="" height="100px" width="auto" >
+    <div class="px-3">
+        <span class="truncate" id="songName"><b>Song Title Song Title song title</b></span>
+        <span class="truncate small" id="songArtist">Artist / Arranger</span>
+    </div>
+    <span id="playerControls" class="d-flex align-items-center">
+        <i id="restartSong" class="fa-solid fa-backward-step fa-2x"></i>
+        <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x"></i></span>
+    <div id="sliderDiv" class="flex-grow-1 px-4"><input type="range" id="songSlider" class="form-range"></div>
+    <span style="padding-right:16px;"><i id="closePlayer" class="fa-solid fa-circle-xmark fa-3x"></i></span>
+
+</div>
+<!-- Page Container -->
+<section class="container">
+    <div class="row pb-5">
+      <div class="col-md-5">
+        <div class=""><img src="./music/easter-cantata-2026/001260469.avif" width="100%"></div>
+        
+      </div>
+      <div class="col-md-7">
+      <h3>The Way, The Truth, The Life</h3>
+      <h4><i class="small">An Easter Celebration created by Dennis and Nan Allen</i></h4>
+      <p>From Dennis and Nan Allen comes The Way, the Truth, the Life, an Easter musical that reflects how Christ is all things to us ... our Way, our Truth, and our Life. Through Scripture-based narration and songs both new and familiar, we walk through the final moments of Christ’s life, His death, and resurrection. We sit at the Passover table with the disciples and learn that Christ is The Way to eternal communion with the Father and the Son. We go to the garden and learn that we only understand what Christ does for us through The Truth. And we stand at the empty tomb and witness why He is The Life! We celebrate all that He is!</p>
+      
+    </div>
+    </div>
+    <div>
+      <ul class="list-group">
+        <li id="song12"class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('12')">play_circle</div>
+          <div class="ps-3"><b>Prepare the Way</b> <br>
+            <span class="small">From Scripture, <i>Arranged by</i> Dennis and Nan Allen</span></div>
+          <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/01_Prepare_the_Way_Audio_Sample.mp3" target="_blank">audio_file</a>
+         
+        </li>
+
+        <li id="song13" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('13')">play_circle</div> 
+          <div class="ps-3"><b>Narration 1</b> <br> 
+            <span class="small"><i>Paraphrased from John 14</i></span></div>
+             
+        </li>
+
+        <li id="song14" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('14')">play_circle</div>
+          <div class="ps-3"><b>O the Blood of Jesus Medley</b> <br>
+            <span class="small"><i>including</i> O the Blood of Jesus, Nothing but the Blood, and There Is a Fountain</span><br>
+            <span class="small"><i>Arranged by</i> Dennis and Nan Allen</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/03_O_the_Blood_of_Jesus_Medley_Audio_Sample.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li id="song15" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('15')">play_circle</div>
+          <div class="ps-3"><b>Narration 2</b><br>
+            <span class="small"><i>paraphrased from John 14 and Luke 23</i></span></div>
+        </li>
+
+        <li id="song16" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('16')">play_circle</div> 
+          <div class="ps-3"><b>What Wondrous Love</b><br>
+            <span class="small"><i>Arranged by</i> Dennis Allen</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/05_What_Wondrous_Love_Audio_Sample.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li id="song17" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('17')">play_circle</div>
+          <div class="ps-3"><b>Narration 3</b>)<br>
+            <span class="small"><i>Paraphrased from Matthew 27, Mark 15, Luke 23, John 19</i></span></div>
+        </li>
+
+        <li id="song18" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('18')">play_circle</div>
+          <div class="ps-3"><b>Alive!</b><br>
+            <span class="small"><i>Arranged by</i> Dennis and Nan Allen</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/07_Alive_Audio_Sample.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li id="song19" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('19')">play_circle</div> 
+          <div class="ps-3"><b>Narration 4</b></div>
+        </li>
+
+        <li id="song20" class="list-group-item d-flex">
+          <div class="material-symbols-outlined material-icons" type="button" onclick="changeSongIndex('20')">play_circle</div> 
+          <div class="ps-3"><b>You Are My King (Amazing Love)</b>
+            <br>
+            <span class="small"><i>Words and music by</i> Billy James Foote</span><br>
+            <span class="small"><i>Arranged by</i> Dennis Allen</span></div>
+              <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/09_You_Are_My_King_Audio_Sample.mp3" target="_blank">audio_file</a>
+        </li>
+
+        <li class="list-group-item d-flex">
+            <div class="ps-3"><b>Choral Book Sample</b><br>
+            <span class="small"><i>Created by</i> Dennis and Nan Allen</span></div>
+            <a class="material-symbols-outlined material-icons ms-auto" type="button" href="./music/easter-cantata-2026/The_Way_the_Truth_the_Life_Choral_Book_Samples.pdf"  target="_blank">picture_as_pdf</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="" style="background-color: ghostwhite;">
+        <div class="container text-center py-5">
+            <div class="mb-4">
+                <a href="https://facebook.com/" target="_blank" class="text-secondary"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                <a href="https://instagram.com/" target="_blank" class="text-secondary"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a href="https://youtube.com/" target="_blank" class="text-secondary"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+            </div>
+            
+            
+            <p class="small text-secondary">Copyright &copy; 2026 Steadfast Music Ministry
+            <br>
+            A ministy of Rockland Fellowship | 2300 Washington Blvd, Belpre, OH 45714</p>
+            
+            <a class="btn btn-secondary" href="#" target="_blank">Join the ministry today!</a>
+    <!-- Footer end. -->
+    </footer>
+    <div style="height: 100px; width: 100%; background-color: ghostwhite;">&nbsp;</div>
+
+        <!-- Load external JavaScript -->
+        <script src="./scripts.js"></script>
+        <script src="./music-player.js"></script>
+        
+    </body>
+
+</html>
