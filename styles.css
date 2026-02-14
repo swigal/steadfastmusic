@@ -37,14 +37,19 @@
     }
 *, .sans-font{
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
 }
 h1, h2, h3, h4, h5, .serif-font{
   font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
+}
+
+.post-author {
+  font-family: "EB Garamond", serif;
   font-weight: 400;
-  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.post-author-nostyle {
+  line-height: 1;
 }
 
 .sans-font-i{

@@ -44,7 +44,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Music</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="./music.html">Music Resources</a></li>
+                    <li><a class="dropdown-item" href="./music.html">Choir Resources</a></li>
                     <li><a class="dropdown-item" href="./easter-cantata-2026.html">Easter Cantata Resources</a></li>
                   </ul>
                 </li>
@@ -69,16 +69,16 @@
                 <p class="text-center">The MOST important information!</p>
             </div>
             <div class="card-body">
-                <h4>Upcoming Pieces</h4>
+                <h4>Upcoming Choral Pieces</h4>
                 <ul>
-                    <li><a href="./music.html?songIndex=2">I Will Sing Praise (Feb. 8th)</a></li>
-                    <li><a href="./music.html?songIndex=1">A Blessing (Feb. 8th)</a></li>
+                    <!--<li><a href="./music.html?songIndex=2">I Will Sing Praise (Feb. 8th)</a></li>
+                    <li><a href="./music.html?songIndex=1">A Blessing (Feb. 8th)</a></li>-->
                     <li><a href="./music.html?songIndex=3">Search Me, Lord (Feb. 18th &amp; 22nd)</a></li>
                     <li><a href="./music.html?songIndex=4">Hide Me (Mar. 8th)</a></li>
-                    <li><a href="./easter-cantata-2026.html">Easter Cantata: The Way, the Truth, the Life (Apr. 5th)</a></li>
-                    <!--<li><a href="./music.html?songIndex=5">When You Speak to Me (Mar. 22nd)</a></li>
+                    <li><a href="./music.html?songIndex=5">When You Speak to Me (Mar. 22nd)</a></li>
                     <li><a href="./music.html?songIndex=6">Blessed Is He (Mar. 29th)</a></li>
-                    <li><a href="./music.html?songIndex=7">This Is Our Freedom (Apr. 2nd)</a></li>
+                    <li><a href="./easter-cantata-2026.html">Easter Cantata: The Way, the Truth, the Life (Apr. 5th)</a></li>
+                    <!--                    <li><a href="./music.html?songIndex=7">This Is Our Freedom (Apr. 2nd)</a></li>
                     <li><a href="./music.html?songIndex=8">Amazing Love (Apr. 12th)</a></li>
                     <li><a href="./music.html?songIndex=9">Hallelujah (Apr. 26th)</a></li>
                     <li><a href="./music.html?songIndex=10">Tis So Sweet to Trust in Jesus (May 10th)</a></li>
@@ -110,6 +110,7 @@
             <div class="card-body">
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <button class="btn btn-secondary filter-btn" data-filter="all" onclick="filterElements('all')">All</button>
+                    <button class="btn btn-secondary filter-btn" data-filter="all" onclick="filterElements('song-devo')">Song Devotion</button>
                     <button class="btn btn-secondary filter-btn" data-filter="update" onclick="filterElements('update')">Updates</button>
                     <button class="btn btn-secondary filter-btn" data-filter="spiritual-formation" onclick="filterElements('spiritual-formation')">Spiritual Formation</button>
                 </div>
@@ -122,11 +123,42 @@
     <div class="col-lg-8 mb-5">
 
 <!-- Post -->
+<article class="card mb-3 filterable-item" data-category="song-devo" style="visibility: visible;">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
+            <div>
+                <div class="ps-2">Samuel Wigal</div>
+                <div class="small ps-2" style="opacity: 0.6;">Director</div>
+            </div>
+            <div class="ms-auto" style="opacity: 0.6;">February 14, 2026 9:30 AM</div>
+        </div>
+        <hr>
+        <h1>Nothing But the Blood - Song Devotional</h1>
+        
+        <p>This morning I just finished listening to yesterdays "Sing" devotion withthe song "Nothing But the Blood."  Sing is a daily devotion prouced by The Worship Initiative.  The Worship Initiative is a ministry that seeks to Equippe and encourage worship teams as they sing the truth of God’s word and glorify Christ.  THey created "Sing" as another means of forwarding this mission. Every weekday they sit down and have a time of prayer, devotion and worship, focusing on one song each day.</p>
+
+        <p>Friday's devotion was on the song "Nothing But the Blood" by The Worship Initiative.  The devotion focused on how this song reminds us of the sacrifice of Christ and how we are saved by His grace alone.  Even though we try to turn to things that seem to satisfy us for a moment, we are reminded that only the blood of Christ can wash away sin.  "This is all our hope and peace. Nothing But the Blood of Jesus." </p>
+        
+        <p>I wanted to encourage you guys to try out Sing.  I may not listen to it every day, but the ones I have listened to have been incredible.  Sometimes they chose an old hymn, sometimes its an original contemporary song. But the devotions are always simple acoustic, so no drums andelectric guitars.  Just piano, acoustic guitar and focusing on God's presence in our lives.</p>
+
+        <p>If you want to check out the devotion, follow this link <a href="https://sing.theworshipinitiative.com/series/daily/2026-02-13?ref_user=5023d3ec-c3c6-4341-92ed-e2d832653b9a">sing.theworshipinitiative.com</a>.</p>
+    </div>
+    <div class="card-footer">
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('all')">All</span>
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('song-devo')">Song Devotion</span>
+    </div>
+</article>
+
+        <!-- Post -->
 <article class="card mb-3 filterable-item" data-category="update" style="visibility: visible;">
     <div class="card-body">
         <div class="d-flex align-items-center">
             <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
-            <h4 class="ps-2">Samuel Wigal</h4>
+            <div>
+                <div class="ps-2">Samuel Wigal</div>
+                <div class="small ps-2" style="opacity: 0.6;">Director</div>
+            </div>
             <div class="ms-auto" style="opacity: 0.6;">February 6, 2026 9:05 PM</div>
         </div>
         <hr>
@@ -149,7 +181,10 @@
     <div class="card-body">
       <div class="d-flex align-items-center">
           <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
-          <h4 class="ps-2">Samuel Wigal</h4>
+          <div>
+                <div class="ps-2">Samuel Wigal</div>
+                <div class="small ps-2" style="opacity: 0.6;">Director</div>
+            </div>
           <div class="ms-auto" style="opacity: 0.6;">January, 4th 2026 3:00 PM</div>
       </div>
       <hr>
