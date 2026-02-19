@@ -132,6 +132,114 @@
     <!-- Right Column -->
     <div class="col-lg-8 mb-5">
 
+        <!-- Post -->
+<article class="card mb-3 filterable-item" data-category="update" style="visibility: visible;">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <img src="./assets/Samuel_Wigal-_Profile_Pic.png" alt="Avatar" class="" style="width:60px">
+            <div>
+                <div class="ps-2">Samuel Wigal</div>
+                <div class="small ps-2" style="opacity: 0.6;">Director</div>
+            </div>
+            <div class="ms-auto" style="opacity: 0.6;">February 19, 2026 4:47 PM</div>
+        </div>
+        <hr>
+        <h1>Steadfast Music Web App</h1>
+        
+        <p>I have made a big update to our website.  I have configured  it to allow you to properly add it to your mobile device just as you would any other app.  Depending on whether you are on and android or iOS device, you may need to do a few extra steps to get it setup.  Simply elect the your device below for instructions to install the web app.</p>
+
+        <p>I have also setup push notifications.  So make sure to enable those when you receive the prompt so you will be notified of future updates on the website.</p>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#iOSInstructionsModal">iOS (iPhone, iPad)</button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AndroidInstructionsModal">Android</button>
+
+        <!-- iOS Instructiopn Modal -->
+<div class="modal" id="iOSInstructionsModal">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen ">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">iOS (iPhone, iPad) Instructions</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h4>Step 1.</h4>
+        <p>Open Safari (or your preferred web browser) on your iPhone or iPad.</p>
+
+        <h4>Step 2.</h4>
+        <p>Tap the Share button (the box with an arrow coming out of it).</p>
+        <img src="./assets/app-photos/step1(ios).PNG" alt="Step 1" class="img-fluid mb-3">
+
+        <h4>Step 3.</h4>
+        <p>Select "Add to Home Screen" from the menu that appears.</p>
+        <img src="./assets/app-photos/step2(ios).PNG" alt="Step 2" class="img-fluid mb-3">
+
+        <h4>Step 4.</h4>
+        <p>Tap "Add" to confirm and add the web app to your home screen.</p>
+        <img src="./assets/app-photos/step3(ios).PNG" alt="Step 3" class="img-fluid mb-3">
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+        <!-- Android Instructions Modal -->
+<div class="modal" id="AndroidInstructionsModal">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen ">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Android Instructions</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h4>Step 1.</h4>
+        <p>Open Chrome (or your preferred web browser) on your Android device.</p>
+
+        <h4>Step 2.</h4>
+        <p>Tap the three dots in the top right corner of the browser window.</p>
+        <img src="./assets/app-photos/step1(android).PNG" alt="Step 1" class="img-fluid mb-3">
+
+        <h4>Step 3.</h4>
+        <p>Select "Add to Home Screen" from the menu that appears.</p>
+        <img src="./assets/app-photos/step2(android).PNG" alt="Step 2" class="img-fluid mb-3">
+
+        <h4>Step 4.</h4>
+        <p>Tap "Add" to confirm and add the web app to your home screen.</p>
+        <img src="./assets/app-photos/step3(android).PNG" alt="Step 3" class="img-fluid mb-3">
+
+        <h4>Important Note:</h4>
+        <p>You should find the web app icon in your list of installed apps.  You may have to manually move it to the home screen if it doesn't appear there automatically.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="card-footer">
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('all')">All</span>
+        <span class="badge rounded-pill bg-secondary" type="button" onclick="filterElements('update')">Updates</span>
+    </div>
+</article>
+
                 <!-- Post -->
 <article class="card mb-3 filterable-item" data-category="update" style="visibility: visible;">
     <div class="card-body">
