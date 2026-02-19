@@ -6,7 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Easter Cantata 2026</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+
+        <!--OneSignal Push Notifications for iOS-->
+        <link rel="manifest" href="./manifest.json">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Steadfast">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link rel="apple-touch-icon" href="./assets/favicon_io/apple-touch-icon.png">
 
 
         <!-- Load external CSS styles -->
@@ -202,6 +212,17 @@
         <!-- Load external JavaScript -->
         <script src="./scripts.js"></script>
         <script src="./music-player.js"></script>
+
+                <!--OneSignal Push Notifications-->
+        <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "9c6cc9a7-a30e-48c1-895d-3af1a475144d",
+    });
+  });
+</script>
         
     </body>
 
