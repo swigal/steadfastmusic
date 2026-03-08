@@ -29,7 +29,33 @@
         
         <!--Font Awesome-->
         <script src="https://kit.fontawesome.com/bf8d243e3f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <style>
+            #playerPanel {
+                visibility: hidden;
+            }
+
+            @media screen and (max-width: 600px) {
+                #sliderDiv {
+                    display: none;
+                }
+                #playerControls {
+                    margin-left: auto;
+                }
+            }
+            .current-song {
+                background-color: #f0f0f0;
+            }
+            li a {
+                color: black;
+                text-decoration: none;
+            }
+            ul li {
+                list-style-type: none;
+            }
+        </style>
 
     </head>
 
@@ -67,6 +93,22 @@
                 </li>
             </ul>
         </nav> 
+
+        <!--Sticky Bottom Media Player-->
+
+<div id="playerPanel" class="panel d-flex align-items-center text-bg-secondary fixed-bottom" style="height: 100px;">
+    <img id="songImage" src="./music/2026-choral-selections.jpeg" class="" height="100px" width="auto" >
+    <div class="px-3">
+        <span class="truncate" id="songName"><b>Song Title Song Title song title</b></span>
+        <span class="truncate small" id="songArtist">Artist / Arranger</span>
+    </div>
+    <span id="playerControls" class="d-flex align-items-center">
+        <i id="restartSong" class="fa-solid fa-backward-step fa-2x"></i>
+        <i id="playPauseSong" class="fa-solid fa-circle-play fa-3x"></i></span>
+    <div id="sliderDiv" class="flex-grow-1 px-4"><input type="range" id="songSlider" class="form-range"></div>
+    <span style="padding-right:16px;"><i id="closePlayer" class="fa-solid fa-circle-xmark fa-3x"></i></span>
+
+</div>
 <!-- Page Container -->
 <div class="container">
   <h2 class="text-center">Schedule</h2>
@@ -76,6 +118,156 @@
       <h3>Rehearsals</h3>
       <ul>
         <li>Sundays at 3:00 PM</li>
+      </ul>
+
+      <h3>Rehearsal Schedule</h3>
+      <ul>
+        <li>
+          <h4>March 8th</h4>
+          <ul>
+
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">When You Speak to Me <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">When You Speak to Me</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('5')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('26')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Alive!<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Alive!</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('18')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('24')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <h4>March 15th</h4>
+          <ul>
+
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">When You Speak to Me <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">When You Speak to Me</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('5')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('26')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Blessed Is He<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Blessed Is He</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('6')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('27')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">You Are My King (Amazing Love)<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">You Are My King (Amazing Love)</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('20')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('25')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <h4>March 22nd</h4>
+          <ul>
+            
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Blessed Is He<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Blessed Is He</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('6')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('27')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Prepare the Way<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Prepare the Way</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('12')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('21')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">O The Blood of Jesus Medley<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">O The Blood of Jesus Medley</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('14')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('22')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">What Wondrous Love<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">What Wondrous Love</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('16')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('23')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Alive!<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Alive!</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('18')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('24')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">You Are My King (Amazing Love)<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">You Are My King (Amazing Love)</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('20')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('25')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <h4>March 29th</h4>
+          <ul>
+            
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Prepare the Way<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Prepare the Way</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('12')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('21')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">O The Blood of Jesus Medley<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">O The Blood of Jesus Medley</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('14')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('22')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">What Wondrous Love<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">What Wondrous Love</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('16')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('23')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">Alive!<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">Alive!</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('18')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('24')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a type="button" data-bs-toggle="dropdown">You Are My King (Amazing Love)<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><h5 class="dropdown-header">You Are My King (Amazing Love)</h5></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('20')"><i class="fa-solid fa-play"></i> Demonstration</a></li>
+                <li><a class="dropdown-item" type="button" onclick="changeSongIndex('25')"><i class="fa-solid fa-play"></i> Choir Only</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
       </ul>
     </div>
     <div class="col-md-6">
@@ -94,7 +286,7 @@
         <div class="container text-center py-5">
             <div class="mb-4">
                 <a href="https://www.facebook.com/rocklandfellowship" target="_blank" class="text-secondary"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
-                <a href="https://instagram.com/" target="_blank" class="text-secondary"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a href="https://instagram.com/rocklandfellowship" target="_blank" class="text-secondary"><i class="fa-brands fa-instagram fa-2xl"></i></a>
                 <a href="https://youtube.com/@rocklandfellowship" target="_blank" class="text-secondary"><i class="fa-brands fa-youtube fa-2xl"></i></a>
             </div>
             
@@ -103,12 +295,13 @@
             <br>
             A ministy of Rockland Fellowship | 2300 Washington Blvd, Belpre, OH 45714</p>
             
-            <a class="btn btn-secondary" href="mailto:samwigal@gmail.com" target="_blank">Join the ministry today!</a>
+            <a class="btn btn-secondary" href="mailto:hello@steadfastmusic.com" target="_blank">Join the ministry today!</a>
     <!-- Footer end. -->
     </footer>
 
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
+        <script src="./music-player.js"></script>
 
                 <!--OneSignal Push Notifications-->
         <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
