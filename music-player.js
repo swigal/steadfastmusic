@@ -26,160 +26,48 @@ const song11 = document.getElementById("song11");
 
 const songs = [
     { //song index 0
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "I Sing Alleluia",
-        artist: "arr. Jeff Lippencott",
-        audio: "./music/2026-schedule/I-Sing-Alleluia-LSTN.mp3"
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "Christ Is Able to Save",
+        artist: "arr. Marty Parks",
+        audio: "./music/26-27-schedule/Christ-Is-Able-to-Save.mp3"
     },
     {//song index 1
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "A Blessing",
-        artist: "arr. Dennis Allen",
-        audio: "./music/2026-schedule/A%20Blessing%20-%20Listening%20Demo.mp3"
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "Peace In The Presence",
+        artist: "arr. Kyle Hill",
+        audio: "./music/26-27-schedule/Peace-In-The-Presence.mp3"
     },
     {//song index 2
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "I Will Sing Praise",
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "I Will Believe (Ver. B)",
         artist: "arr. Dave Williamson",
-        audio: "./music/2026-schedule/I%20Will%20Sing%20Praise%20-%20Demo.mp3"
+        audio: "./music/26-27-schedule/I-Will-Believe-(Version-B).mp3"
     },
     {//song index 3
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Search Me, Lord",
-        artist: "arr. Jimm Hammerly",
-        audio: "./music/2026-schedule/Search%20Me%20-%20Demonstration.mp3",
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "You Are My Shelter",
+        artist: "arr. Phillip Keveren",
+        audio: "./music/26-27-schedule/You-Are-My-Shelter.mp3",
     },
     {//song index 4
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Hide Me",
-        artist: "arr. Dennis Allen",
-        audio: "./music/2026-schedule/Hide-Me.mp3",
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "Comfort Comes",
+        artist: "arr. Robert Sterling",
+        audio: "./music/26-27-schedule/Comfort-Comes.mp3",
     },
     {//song index 5
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "When You Speak to Me",
-        artist: "arr. Kyle Hill",
-        audio: "./music/2026-schedule/When%20You%20Speak%20-%20Demonstration.mp3",
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "Thanks Be To God",
+        artist: "arr. Sheldon Curry",
+        audio: "./music/26-27-schedule/Thanks-Be-To-God.mp3",
     },
     {//song index 6
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Blessed Is He",
-        artist: "arr. Dennis Allen",
-        audio: "./music/2026-schedule/Blessed%20is%20He%20-%20Listening%20Demo.mp3",
+        image: "./music/26-27-schedule/Folder.jpg",
+        name: "Gloria (SATB)",
+        artist: "arr. Jeff Lippencott",
+        audio: "./music/26-27-schedule/Gloria-(SATB).mp3",
     },
-    {//song index 
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "This Is Our Freedom",
-        artist: "arr. Dennis Allen",
-        audio: "./music/2026-schedule/This%20Is%20Our%20Freedom%20-%20Demonstration.mp3",
-    },
-    {//song index 
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Amazing Love",
-        artist: "arr. Bob Burroughs",
-        audio: "./music/2026-schedule/Amazing%20Love%20-%20Demonstration.mp3",
-    },
-    {//song index 
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Hallelujah",
-        artist: "arr. Patrick",
-        audio: "./music/2026-schedule/Hallelujah%20-%20Patrick.mp3",
-    },
-    {//song index 
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Tis So Sweet to Trust in Jesus",
-        artist: "arr. Dennis Allen",
-        audio: "./music/2026-schedule/Tis%20So%20Sweet%20-%20Demonstration.mp3",
-    },
-    {//song index 
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Holy",
-        artist: "arr. John Patrick",
-        audio: "./music/2026-schedule/Holy%20-%20Demo.mp3",
-    },
-    {//song index 12
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Prepare the Way",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/01_Prepare_the_Way_Audio_Sample.mp3"
-    },{//song index 13
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Narration 1",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/02_Narration_01_Audio_Sample.mp3"
-    },{//song index 14
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "O The Blood of Jesus Medley",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/03_O_the_Blood_of_Jesus_Medley_Audio_Sample.mp3"
-    },{//song index 15
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Narration 2",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/04_Narration_02_Audio_Sample.mp3"
-    },{//song index 16
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "What Wondrous Love",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/05_What_Wondrous_Love_Audio_Sample.mp3"
-    },{//song index 17
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Narration 3",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/06_Narration_03_Audio_Sample.mp3"
-    },{//song index 18
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Alive",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/07_Alive_Audio_Sample.mp3"
-    },{//song index 19
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Narration 4",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/08_Narration_04_Audio_Sample.mp3"
-    },{//song index 20
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "You Are My King",
-        artist: "Dennis and Nan Allen",
-        audio: "./music/easter-cantata-2026/09_You_Are_My_King_Audio_Sample.mp3"
-    },
-    //song index 21
-    {
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Prepare the Way",
-        artist: "Vocals Only",
-        audio: "./music/vocal-tracks/prepare-the-way-choir-track.mp3"
-    },{//song index 22
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "O The Blood of Jesus Medley",
-        artist: "vocals Only",
-        audio: "./music/vocal-tracks/o-the-blood-choir-track.mp3"
-    },{//song index 23
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "What Wondrous Love",
-        artist: "Vocals only",
-        audio: "./music/vocal-tracks/what-wondrous-love-choir-track.mp3"
-    },{//song index 24
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "Alive",
-        artist: "Vocals Only",
-        audio: "./music/vocal-tracks/alive-choir-track.mp3"
-    },{//song index 25
-        image: "./music/easter-cantata-2026/001260469.avif",
-        name: "You Are My King",
-        artist: "Vocals Only",
-        audio: "./music/vocal-tracks/you-are-my-king-choir-track.mp3"
-    },{//song index 26
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "When You Speak to Me",
-        artist: "Vocals Only",
-        audio: "./music/vocal-tracks/when-you-speak-to-me-choir-track.mp3",
-    },{//song index 27
-        image: "./music/2026-schedule/2026-schedule.jpeg",
-        name: "Blessed Is He",
-        artist: "Vocals Only",
-        audio: "./music/vocal-tracks/blessed-is-he-choir-track.mp3",
-    },
+ 
 
 ];
 
@@ -187,6 +75,16 @@ const audio = document.createElement("audio");
 let currentSongIndex = 0;
 
 updateSong();
+
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    updateSong();
+    audio.play();
+}
+
+audio.addEventListener('ended', function() {
+    nextSong();
+});
 
 /*prevSongButton.addEventListener("click", function() {
     if (currentSongIndex == 0) {
